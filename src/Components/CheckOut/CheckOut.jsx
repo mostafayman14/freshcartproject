@@ -13,7 +13,7 @@ export default function CheckOut() {
   const [errorSUbmit, setErrorSUbmit] = useState(null)
   const [loading, setLoading] = useState(false)
 
-  const url = 'http://localhost:5173';
+  const url = 'https://mostafayman14.github.io/freshcartproject/#/';
   const headers = {
     token: localStorage.getItem('userToken')
   }
@@ -25,7 +25,7 @@ console.log(cart);
   async function checkoutInfo(values) {
     try {
       setLoading(true);
-      let { data } = await axios.post(`https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${cart.cartId}?url=http://localhost:5173`, { 'shippingAddress': values }, { headers }, { url });
+      let { data } = await axios.post(`https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${cart.cartId}?url=https://mostafayman14.github.io/freshcartproject/#/`, { 'shippingAddress': values }, { headers }, { url });
       { data && setSendData(true); }
       setErrorSUbmit(null);
       console.log(data);
