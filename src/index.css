@@ -1,0 +1,146 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@300&display=swap');
+
+*{
+  box-sizing: border-box;
+}
+
+:root {
+  --main-color: #0aad0a;
+  --light-color: #f0f3f2;
+  --shadow: rgba(145, 158, 171, .2) 0px 2px 4px -1px, rgba(145, 158, 171, .14) 0px 4px 5px 0px, rgba(145, 158, 171, .12) 0px 1px 10px 0px;
+  --font-family: 'Encode Sans Expanded', sans-serif;
+  --rating-color: #ffc908;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+a:hover{
+  color: var(--main-color);
+}
+.rating-color {
+  color: var(--rating-color);
+}
+
+.product:hover {
+  box-shadow: var(--shadow);
+}
+
+.product .btn {
+  transition: transform 1s, opacity 1s;
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+.product:hover .btn {
+  opacity: 1;
+  transform: translateY(0%);
+
+}
+
+.font-sm {
+  font-size: 14px;
+}
+
+.text-main {
+  color: var(--main-color);
+}
+
+.text-main-light {
+  color: var(--light-color);
+}
+
+.bg-main {
+  background-color: var(--main-color) !important;
+}
+
+.bg-main-light {
+  background-color: var(--light-color) !important;
+}
+
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 2em;
+  line-height: 1.2;
+}
+
+button{
+  @apply px-3.5 py-1.5 mx-1 my-2 rounded-lg bg-green-500 text-white hover:bg-green-600 focus:ring-2 focus:ring-green-700;
+  
+}
+.active{
+  color: var(--main-color);
+position: relative;
+padding-bottom:3px ;
+}
+.active::after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: #0aad0a;
+  border-radius: 3px;
+  -webkit-transform: translate(-50%);
+  -moz-transform: translate(-50%);
+  -ms-transform: translate(-50%);
+  -o-transform: translate(-50%);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+}
+
+.headingTitle{
+  position: relative;
+  width: fit-content;
+}
+.headingTitle::after{
+  content: '';
+  position: absolute;
+  width: 90%;
+  height: 4px;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: #0aad0a;
+  border-radius: 3px;
+  -webkit-transform: translate(-50%);
+  -moz-transform: translate(-50%);
+  -ms-transform: translate(-50%);
+  -o-transform: translate(-50%);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+}
+
+
+button h2{
+  width: 80%;
+}
+
+#root > div.mx-2.md\:mx-6.mt-4.py-12 > div > button{
+  background-color: rgb(229 231 235 );
+  color: black;
+}
+#root > div.mx-2.md\:mx-6.mt-4.py-12 > div {
+  padding-right: 15px;
+  padding-left: 8px;
+}
+
+#root > div.mx-2.md\:mx-6.mt-4.py-12 > div[data-active-classes]{
+  background-color: red;
+}
