@@ -18,14 +18,14 @@ export default function CheckOut() {
     token: localStorage.getItem('userToken')
   }
 
-  const {cart} = useContext(CartContext);
-console.log(cart);
+  const { cart } = useContext(CartContext);
+  console.log(cart);
 
 
   async function checkoutInfo(values) {
     try {
       setLoading(true);
-      let { data } = await axios.post(`https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${cart.cartId}?url=https://mostafayman14.github.io/freshcartproject/#/`, { 'shippingAddress': values }, { headers }, { url });
+      let { data } = await axios.post(`https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${cart.cartId}?url=https://mostafayman14.github.io/freshcartproject/#/`, { 'shippingAddress': values }, { headers }, { params: { url } });
       { data && setSendData(true); }
       setErrorSUbmit(null);
       console.log(data);
