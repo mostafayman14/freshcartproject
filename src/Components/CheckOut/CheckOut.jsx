@@ -25,7 +25,7 @@ export default function CheckOut() {
   async function checkoutInfo(values) {
     try {
       setLoading(true);
-      let { data } = await axios.post(`https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${cart.cartId}?url=https://mostafayman14.github.io/freshcartproject/#/`, { 'shippingAddress': values }, { headers }, { params: { url } });
+      let { data } = await axios.post(`https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${cart.cartId}`, { 'shippingAddress': values }, { headers }, { params: { url } });
       { data && setSendData(true); }
       setErrorSUbmit(null);
       console.log(data);
