@@ -13,7 +13,7 @@ export default function CheckOut() {
   const [errorSUbmit, setErrorSUbmit] = useState(null)
   const [loading, setLoading] = useState(false)
 
-  const url = 'https://mostafayman14.github.io/freshcartproject/#/';
+  const url = 'https://mostafayman14.github.io/freshcartproject/#';
   const headers = {
     token: localStorage.getItem('userToken')
   }
