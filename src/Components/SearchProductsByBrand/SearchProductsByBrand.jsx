@@ -13,7 +13,7 @@ export default function SearchProductsByBrand(getData, searctitle) {
   return (getData
     .filter((prod) => prod.brand.name.includes(searctitle))
     .map((item) => (
-      <div key={item.id} className="w-1/6">
+      <div key={item.id} className="w-1/2 md:w-1/3 lg:w-1/5 xl:w-1/6 p-3">
         <div className="product rounded-xl p-2">
           <Link to={`/productdetails/${item.id}`}>
             <img className="w-full" src={item.imageCover} alt={item.title} />

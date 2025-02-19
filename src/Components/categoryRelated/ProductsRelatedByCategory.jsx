@@ -40,13 +40,13 @@ export default function ProductsRelatedByCategory({ categoryName }) {
           (<Loading />)
           :
           (
-            <div className="w-full flex flex-wrap  gap-y-4 justify-center overflow-hidden pt-5">
+            <div className="w-full flex flex-wrap gap-y-4 justify-center overflow-hidden pt-5">
               {SearchProducts(getData, categoryName)}
             </div>
           )
       }
       <div className="flex justify-center">
-        <div className="flex  gap-3 py-10 w-full md:w-3/4 md:text-xl">
+        <div className="flex gap-3 py-10 w-full md:w-3/4 md:text-xl">
           <div className="flex-1">
             <Link to='/products'>
               <button className="btn py-2 px-5 w-full ">Back to all products</button>
